@@ -29,7 +29,14 @@ export default {
         setListaProdutosAdd(state: any, index: any){
             state.listaProdutos[index]['quantidade']++
         },
-        setListaProdutosRemove(state: any, value: any){
+        setListaProdutosRemove(state: any, index: any){
+            if(state.listaProdutos[index]['quantidade'] <= 1) {
+               state.listaProdutos[index]['quantidade'] = 1
+            }else{
+               state.listaProdutos[index]['quantidade']--;
+            }
+        },
+        setListaProdutosDelete(state: any, value: any){
             state.listaProdutos = value
         }
     },
@@ -48,6 +55,9 @@ export default {
         },
         changeListaProdutosRemove(context: any, value: any){
             context.commit('setListaProdutosRemove', value)
+        },
+        changeListaProdutoDelete(context: any, value: any){
+            context.commit('setListaProdutosDelete', value)
         },
     }
 }
