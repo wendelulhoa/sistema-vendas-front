@@ -103,18 +103,18 @@
       <div class="col-lg-12">
         <div class="card ">
           <div class="card-header ">
-            <h3 class="card-title">Order Summery</h3>
+            <h3 class="card-title">resumo vendas</h3>
           </div>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered align-items-center">
                 <tbody>
                   <tr>
-                    <td>Cart Subtotal</td>
+                    <td>Subtotal</td>
                     <td class="text-right">{{ total }}</td>
                   </tr>
                   <tr>
-                    <td><span>Discount</span></td>
+                    <td><span>Desconto</span></td>
                     <td class="text-right text-muted"><span>0.0%</span></td>
                   </tr>
                   <tr>
@@ -122,7 +122,7 @@
                     <td class="text-right text-muted"><span>{{ total }}</span></td>
                   </tr>
                   <tr>
-                    <td><span>Order Total</span></td>
+                    <td><span> Total</span></td>
                     <td>
                       <h2 class="price text-right mb-0">{{ total }}</h2>
                     </td>
