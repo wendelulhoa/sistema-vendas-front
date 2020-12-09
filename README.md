@@ -12,9 +12,18 @@
 # imagens do projeto
 
 ## tela de produtos
-
+<img src="https://github.com/wendelulhoa/sistema-vendas-front/blob/main/images-readme/produtos.PNG">
 ## tela de carrinho
+<img src="https://github.com/wendelulhoa/sistema-vendas-front/blob/main/images-readme/carrinho.PNG">
 
 ## tela de login
+<img src="https://github.com/wendelulhoa/sistema-vendas-front/blob/main/images-readme/login.PNG">
 
 ## tela compras efetuadas
+<img src="https://github.com/wendelulhoa/sistema-vendas-front/blob/main/images-readme/detalheCompras.PNG">
+
+## tela cadastro
+<img src="https://github.com/wendelulhoa/sistema-vendas-front/blob/main/images-readme/cadastro.PNG">
+
+## tela compras
+<img src="https://github.com/wendelulhoa/sistema-vendas-front/blob/main/images-readme/compras.PNG">
