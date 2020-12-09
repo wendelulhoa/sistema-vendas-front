@@ -1,24 +1,20 @@
-# sistema-vendas-front
+# sistema-vendas-front 
 
-## Project setup
-```
-npm install
-```
+## para testar o projeto deverá baixar a parte do back-end nesse repositorio:
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## https://github.com/wendelulhoa/sistema-vendas-back.git
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## site para testar: https://wendelulhoa-front.ml
 
-### Lints and fixes files
-```
-npm run lint
-```
+# comandos para usar localmente
+## precisará somente do 'npm install' e terá que ter o node instalado, e é bom ter o vue cli para não ter erro.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# imagens do projeto
+
+## tela de produtos
+
+## tela de carrinho
+
+## tela de login
+
+## tela compras efetuadas
