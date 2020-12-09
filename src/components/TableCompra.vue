@@ -25,7 +25,7 @@
                 <tbody>
                   <tr  v-for="(item, index) in arrayContent" :key="index" >
                     <td >{{item.nome_produto}}</td>
-                    <td >{{ item.preco_produto }}</td>
+                    <td >{{ item.preco_compra }}</td>
                     <td >{{ item.quantidade }}</td>
                     <td >{{ item.data_compra }}</td>
                     <td >{{ item.num_pedido }}</td>

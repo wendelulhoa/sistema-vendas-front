@@ -133,7 +133,7 @@
               </div>
             </div>
             <hr class="mb-4">
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Continue o checkout</button>
+            <button class="btn btn-success btn-lg btn-block" type="submit">pagar</button>
           </form>
         </div>
       </div>
