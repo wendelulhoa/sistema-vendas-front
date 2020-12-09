@@ -150,12 +150,15 @@ export default {
   computed: {
     ...mapGetters({
       listaProdutos: "getListaProdutos",
-      total: "getTotal"
+      total: "getTotal",
+      cpf: "getCpf",
+      totalCart:"getProdutosCart"
     })
   },
   methods: {
     ...mapActions({
-      changeListaProdutos: "changeListaProdutos"
+      changeListaProdutos: "changeListaProdutos",
+      changeProdutosCart: "changeProdutosCart"
     }),
     find(type) {
         if(type == 'produto'){
@@ -193,7 +196,8 @@ export default {
         precoProduto: preco,
         nome: nome,
         quantidade: 1,
-        pathImg: path
+        pathImg: path,
+        cpf: this.cpf
       });
       this.somaPedido()
       this.$bvToast.toast('item adicionado ao carrinho', {
@@ -201,6 +205,9 @@ export default {
                 variant: 'success',
                 solid: true
               })
+              let totalCart = parseInt(this.totalCart)
+              totalCart++
+              this.changeProdutosCart( totalCart)
       }
 
       

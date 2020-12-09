@@ -140,7 +140,7 @@
 </template>
 
 <script>
-import { mapGetters} from 'vuex'
+import { mapGetters, mapActions} from 'vuex'
 import cep from "@/app/http/axios/cep/cep"
 import {api} from "@/app/http/axios/api/api"
 import Mixin from '@/mixins/mixin'
@@ -160,6 +160,11 @@ export default {
     })
   },
   methods: {
+    ...mapActions({
+      changeListaProdutosRemove: "changeListaProdutosRemove",
+      changeTotal: "changeTotal",
+      changeProdutosCart: "changeProdutosCart"
+    }),
     buscarCep(value){
       cep.cep(value).then(e=>{
         this.cidade = e.data.localidade,
@@ -168,10 +173,10 @@ export default {
     },
     pagar(){
       api.create('payout', this.listaProdutos).then(e=>{
-          
-        this.$router.push('/admin')
+        this.changeListaProdutosRemove([])
+        this.changeProdutosCart(0)
+        this.$router.push('/compras')
       } )
-      
       
     }
     }

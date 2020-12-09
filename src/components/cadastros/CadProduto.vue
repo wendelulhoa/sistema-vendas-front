@@ -60,22 +60,25 @@
 <script>
 import { api } from "@/app/http/axios/api/api";
 export default {
- data() {
-   return {
-     categoria:[]
-   }
- },
-  mounted() {
-    api.find('find/produtos?tipo=categoria').then(e=>{
-      this.categoria = e.data
-    })
+  props: {
+    categoria: {
+      type: Array
+    }
   },
   methods: {
     cadastrar() {
       const form = document.forms.namedItem("produto");
       const data = new FormData(form);
       api.create("admin/cad/produto", data).then(e => {
-        console.log("sucesso");
+        this.$bvToast.toast(
+            "cadastrado com sucesso",
+            {
+              title: "sucesso",
+              variant: "success",
+              solid: true,
+            }
+          );
+          form.reset()
       });
     }
   }

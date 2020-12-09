@@ -114,6 +114,7 @@ export default {
               solid: true,
             }
           );
+          form.reset()
       }).catch(e=>{
         this.$bvToast.toast(
             "verifique os campos informados e tente novamente",

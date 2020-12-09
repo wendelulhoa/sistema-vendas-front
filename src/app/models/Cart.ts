@@ -2,7 +2,8 @@
 export default {
     state:{
         listaProdutos:[],
-        total:0
+        total:0,
+        produtosCart:0
     },
     getters:{
         getListaProdutos(state: any){
@@ -10,6 +11,9 @@ export default {
         },
         getTotal(state: any){
             return state.total
+        },
+        getProdutosCart(state: any){
+            return state.produtosCart
         }
     },
     mutations:{
@@ -19,15 +23,14 @@ export default {
         setTotal(state: any, value: any){
             state.total = value
         },
+        setProdutosCart(state: any, value: number){
+            state.produtosCart = value
+        },
         setListaProdutosAdd(state: any, index: any){
             state.listaProdutos[index]['quantidade']++
         },
-        setListaProdutosRemove(state: any, index: any){
-            if (state.listaProdutos[index]['quantidade'] <= 1) {
-                state.listaProdutos[index]['quantidade'] = 1
-            } else {
-                state.listaProdutos[index]['quantidade']--;
-            }
+        setListaProdutosRemove(state: any, value: any){
+            state.listaProdutos = value
         }
     },
     actions:{
@@ -36,6 +39,9 @@ export default {
         },
         changeTotal(context: any, value: any){
             context.commit('setTotal', value)
+        },
+        changeProdutosCart(context: any, value: number){
+            context.commit('setProdutosCart', value)
         },
         changeListaProdutosAdd(context: any, value: any){
             context.commit('setListaProdutosAdd', value)

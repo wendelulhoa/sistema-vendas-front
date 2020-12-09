@@ -48,8 +48,17 @@ export default {
       const form = document.forms.namedItem("categoria");
       const data = new FormData(form);
         api.create('admin/cad/categoria', data).then(e=>{
-          console.log('sucesso')
+          this.$bvToast.toast(
+            "cadastrado com sucesso",
+            {
+              title: "sucesso",
+              variant: "success",
+              solid: true,
+            }
+          );
+          form.reset()
         })
+        
     }
   }
 };

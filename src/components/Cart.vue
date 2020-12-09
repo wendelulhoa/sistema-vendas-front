@@ -156,6 +156,9 @@ export default {
       host:"getHost"
     })
   },
+  mounted(){
+    this.somaPedido()
+  },
   methods: {
     ...mapActions({
       changeListaProdutosAdd: "changeListaProdutosAdd",
@@ -174,6 +177,3 @@ export default {
   }
 };
 </script>
-<style scoped>
-@import "./style.css";
-</style>
