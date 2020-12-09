@@ -161,7 +161,7 @@ export default {
   },
   methods: {
     ...mapActions({
-      changeListaProdutosRemove: "changeListaProdutosRemove",
+      changeListaProdutoDelete: "changeListaProdutoDelete",
       changeTotal: "changeTotal",
       changeProdutosCart: "changeProdutosCart"
     }),
@@ -173,7 +173,7 @@ export default {
     },
     pagar(){
       api.create('payout', this.listaProdutos).then(e=>{
-        this.changeListaProdutosRemove([])
+        this.changeListaProdutoDelete([])
         this.changeProdutosCart(0)
         this.$router.push('/compras')
       } )

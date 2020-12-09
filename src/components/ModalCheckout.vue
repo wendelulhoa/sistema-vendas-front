@@ -7,7 +7,7 @@
       v-model="show"
       id="modal-scrollable"
       scrollable
-      size="xl"
+      size="lg"
       title="atividades enviadas"
     >
       <Checkout />

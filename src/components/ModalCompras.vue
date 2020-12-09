@@ -1,7 +1,7 @@
 <template>
     <div>
   <b-button @click="find()" variant="primary">detalhes pedido</b-button>
-  <b-modal v-model="show" id="modal-scrollable" scrollable size="xl" title="compras detalhe">
+  <b-modal v-model="show" id="modal-scrollable" scrollable size="lg" title="compras detalhe">
       
             <Table :arrayContent="compras" />
   </b-modal>
